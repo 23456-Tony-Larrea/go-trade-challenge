@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar Nuevo Establecimiento</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">Cerrar sesión</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <p>Bienvenido, {{ surname }}</p>
+</ion-content>
+
+<ion-content>
+  <ion-list>
+    <form (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="establishment.nombre" name="nombre"></ion-input>
+      </ion-item>
+
+      <!-- Repite este bloque para cada campo en tu clase Establishment -->
+      <ion-item>
+        <ion-label position="floating">Dirección Manzana</ion-label>
+        <ion-input type="text" [(ngModel)]="establishment.direccion_manzana" name="direccion_manzana"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Dirección calle principal</ion-label>
+        <ion-input type="text" [(ngModel)]="establishment.direccion_calle_principal" name="direccion_calle_principal"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Dirección numero</ion-label>
+        <ion-input type="text" [(ngModel)]="establishment.direccion_numero" name="direccion_numero"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Dirección transversal</ion-label>
+        <ion-input type="text" [(ngModel)]="establishment.direccion_transversal" name="direccion_transversal"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating">Dirección referencial</ion-label>
+        <ion-input type="text" [(ngModel)]="establishment.direccion_referencia" name="direccion_referencia"></ion-input>
+      </ion-item>
+      <!-- administrador -->
+      <ion-item>
+        <ion-label position="floating">Administrador</ion-label>
+        <ion-input type="text" [(ngModel)]="establishment.administrador" name="administrador"></ion-input>
+      </ion-item>
+      <!-- telefonos_contacto -->
+      <ion-item>
+        <ion-label position="floating">Telefonos de contacto</ion-label>
+        <ion-input type="text" [(ngModel)]="establishment.telefonos_contacto" name="telefonos_contacto"></ion-input>
+      </ion-item>
+      <!-- email_contacto -->
+      <ion-item>
+        <ion-label position="floating">Email de contacto</ion-label>
+        <ion-input type="text" [(ngModel)]="establishment.email_contacto" name="email_contacto"></ion-input>
+      </ion-item>
+      <!-- ubicacion -->
+      <ion-item>
+        <ion-label position="floating">Ubicacion</ion-label>
+        <ion-input type="text" [(ngModel)]="establishment.ubicacion" name="ubicacion"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" type="submit">Agregar Establecimiento</ion-button>
+    </form>
+  </ion-list>
+</ion-content>
